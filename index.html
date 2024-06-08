@@ -55,64 +55,60 @@
             <h1 class="title is-1 publication-title">Towards Comprehensive Detection of <br/>Chinese Harmful Memes: <br/>Dataset and Detector</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Junyu Lu,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Bo Xu,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xiaokun Zhang</a>
+              <span class="author-block"><a href="https://dut-lujunyu.github.io/" target="_blank">Junyu Lu,</a></span>
+              <span class="author-block"><a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Bo Xu,</a></span>
+              <span class="author-block"><a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xiaokun Zhang,</a></span>
+              <span class="author-block"><a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xiaokun Zhang,</a></span>
+              <span class="author-block"><a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Hongbo Wang,</a></span>
+              <span class="author-block"><a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Haohao Zhu,</a></span>
+              <span class="author-block"><a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Dongyu Zhang,</a></span>
+              <span class="author-block"><a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Liang Yang,</a></span>
+              <span class="author-block"><a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Hongfei Lin,</a><sup>*</sup></span>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Dalian University of Technology<br>Arxiv</span>
+                      <span class="author-block"><sup></sup>Dalian University of Technology</span>
+                      <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding author</small></span>
+                      <span class="eql-cntrb"><small><br><a
+                                  href="mailto:dut_ljy@foxmail.com">dut_ljy@foxmail.com</a>, <a
+                                  href="mailto:hflin@dlut.edu.cn">hflin@dlut.edu.cn</a></small></span>
                   </div>
+          
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
+          <div class="column has-text-centered">
+              <div class="publication-links">
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                      <a href="?" target="_blank"
+                          class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                              <i class="ai ai-arxiv"></i>
+                          </span>
+                          <span>arXiv</span>
                       </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
                   </span>
 
+                  <span class="link-block">
+                      <a href="https://huggingface.co/datasets/JunyuLu/ToxiCN_MM" target="_blank"
+                          class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                              &#x1F917;
+                          </span>
+                          <span>Data</span>
+                      </a>
+                  </span>
+                 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                      <a href="https://github.com/DUT-lujunyu/ToxiCN_MM" target="_blank"
+                          class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                              <i class="fab fa-github"></i>
+                          </span>
+                          <span>Code</span>
+                      </a>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -156,7 +152,11 @@
           </center>
           <div class="level-set has-text-justified">
             <p>
-                About Dataset.
+                **ToxiCN MM contains 12,000 diverse samples collected from Chinese social platforms.**
+                In addition to the basic binary labels (i.e., harmful or non-harmful), we provide annotations for harmful memes at two levels of granularity: **harmful type** and **modality combination feature**.
+                For the harmful type, we focus on both *targeted harmful memes* and those exhibiting potential toxicity without specific targets, including *general offense*, *sexual innuendo*, and *dispirited culture*. 
+                These memes are identified as the most common harmful types of memes on Chinese platforms based on the consensus of social psychology. Their harm to individuals and society has been widely discussed.
+                For the modality combination feature, we examine how harmful memes convey toxicity through the interplay of textual and visual elements, either combined or independently, including *text-image fusion*, *harmful text*, and *harmful image*.
             </p>
           </div>
         </div>
@@ -170,13 +170,15 @@
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content">
-          <h2 class="title is-3">Multimodal Harmful Knowledge Enhanced (MHKE) Detector</h2>
+          <h2 class="title is-3">MHKE Detector</h2>
           <center>
           <img src="static/images/method.png" alt="tes" class="centert-image" style="width: 70%; height: auto;"/>
           </center>
           <div class="level-set has-text-justified">
             <p>
-                About detector. 
+                For the detector development, we present a Multimodal Harmful Knowledge Enhancement (MHKE) detector, intuitively introducing the contextual information of meme content. 
+                We utilize the large language model (LLM) to capture the context of both the text and image of the meme, leveraging its extensive knowledge acquired through pre-training.  
+                This information is then integrated into a trainable detector as enhanced captions to improve the understanding of the meme.
             </p>
           </div>
         </div>
